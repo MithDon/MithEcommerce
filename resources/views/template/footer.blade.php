@@ -1,1 +1,1 @@
-<h1>Footer</h1>
+<div style="clear:both;"><h1>Footer</h1></div>
