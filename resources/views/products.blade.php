@@ -14,7 +14,7 @@
     <div class="carousel-inner">
       @foreach ($products as $item)
       <a href="detail/{{$item['id']}}"></a>
-      <div class="carousel-item {{$item['id']==1?'active':''}}">
+      <div class="cus carousel-item {{$item['id']==1?'active':''}}">
         <img src="{{$item['gallery']}}" class="d-block" alt="..." style="height:400px;">
         <div class="carousel-caption d-none d-md-block" style="background-color: #00000085;">
           <h5>{{$item['name']}}</h5>
