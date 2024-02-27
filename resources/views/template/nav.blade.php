@@ -35,7 +35,16 @@ $total=ProductController::cartItems();
         
       </ul>
       <div>Cart ({{$total}})</div>
-      <div>{{Session::get('user')['name']}}</div>
+      <?php 
+      if(Session::has('user')){
+        ?>
+        <div>{{Session::get('user')['name']}}</div>
+        <?php 
+
+
+      }
+      ?>
+      
       <a href="/logout">Logout</a>
 
       
