@@ -13,7 +13,7 @@
     </div>
     <div class="carousel-inner">
       @foreach ($products as $item)
-      <a href="detail/{{$item['id']}}"></a>
+      <a href="detail/{{$item['id']}}">
       <div class="cus carousel-item {{$item['id']==1?'active':''}}">
         <img src="{{$item['gallery']}}" class="d-block" alt="..." style="height:400px;">
         <div class="carousel-caption d-none d-md-block" style="background-color: #00000085;">
@@ -35,19 +35,21 @@
         style="background-color: #000;border-radius:50px;"></span>
       <span class="visually-hidden">Next</span>
     </button>
-  </div>
+  </div>  
 
   <div class="trending_wrapper" style="margin:30px;">
     <h3>Trending Products</h3>
     @foreach ($products as $item)
+    <a href="detail/{{$item['id']}}">
     <div style="float:left;width:290px;">
       <img src="{{$item['gallery']}}" class="" alt="..." style="height:150px;">
       <div class="" style="">
         <h5>{{$item['name']}}</h5>
       </div>
     </div>
+    </a>
     @endforeach
   </div>
 
-</div>df
+</div>
 @endsection
