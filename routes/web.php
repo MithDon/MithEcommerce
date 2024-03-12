@@ -3,6 +3,7 @@
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\UserController;
 use App\Http\Controllers\ProductController;
+use App\Http\Controllers\fileUploadController;
 
 /*
 |--------------------------------------------------------------------------
@@ -29,3 +30,5 @@ Route::post("login",[UserController::class,'login']);
 Route::get("/",[ProductController::class,'index']);
 Route::get("detail/{id}",[ProductController::class,'product_details']);
 Route::post("add_to_cart",[ProductController::class,'add_to_cart']);
+Route::post("file_upload",[fileUploadController::class,'formUpload']);
+Route::post("fileupload_data",[fileUploadController::class,'fileupload_data'])->name('fileupload_data');
